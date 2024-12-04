@@ -40,7 +40,7 @@ def func1():
                     for i in range(len(a)):
                         if(a[i] in arr):
 
-                            ImageAddress = 'letters/'+a[i]+'.jpg'
+                            ImageAddress = 'assets/letters/'+a[i]+'.jpg'
                             ImageItself = Image.open(ImageAddress)
                             ImageNumpyFormat = np.asarray(ImageItself)
                             plt.imshow(ImageNumpyFormat)
@@ -152,11 +152,11 @@ def func2():
         return
     myobj = gTTS(text=string, lang=language, slow=False)
 
-    myobj.save("temp_audio.mp3")
+    myobj.save("audio.mp3")
 
     # Play the audio file
     mixer.init()
-    mixer.music.load("temp_audio.mp3")
+    mixer.music.load("audio.mp3")
     mixer.music.play()
 
 
@@ -172,7 +172,7 @@ def func3():
             a = a.replace(c, "")
 
         if a in arr:
-            ImageAddress = 'letters/' + a + '.jpg'
+            ImageAddress = 'assets/letters/' + a + '.jpg'
             ImageItself = Image.open(ImageAddress)
             ImageNumpyFormat = np.asarray(ImageItself)
             plt.imshow(ImageNumpyFormat)

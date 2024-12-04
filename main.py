@@ -152,11 +152,11 @@ def func2():
         return
     myobj = gTTS(text=string, lang=language, slow=False)
 
-    myobj.save("audio.mp3")
+    myobj.save("temp_audio.mp3")
 
     # Play the audio file
     mixer.init()
-    mixer.music.load("audio.mp3")
+    mixer.music.load("temp_audio.mp3")
     mixer.music.play()
 
 
@@ -186,8 +186,8 @@ def func3():
 
 
 while 1:
-    image = "Welcome_Screen.jpg"
-    msg = "3-Way American Sign Language Translator (ASL)  \n By Harshit Maheshwari"
+    image = "assets/Welcome_Screen.jpg"
+    msg = "3-Way American Sign Language Translator (ASL)"
     choices = ["Audio to Text/Sign", "Sign to Audio/Text", "Text to Sign", "Quit"]
     reply = buttonbox(msg, image=image, choices=choices)
     if reply == choices[0]:

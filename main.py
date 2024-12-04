@@ -55,7 +55,7 @@ def func1():
 
 
 def func2():
-    model = keras.models.load_model("asl_classifier_new.h5")
+    model = keras.models.load_model("Train/asl_classifier_new.h5")
     pipe = pipeline("image-classification", model="dima806/facial_emotions_image_detection")
     labels_dict = {
     0: '1', 1: 'w', 2: '0', 3: '6', 4: 'd', 5: '3', 6: 'u', 7: 'p', 8: 'x', 9: '5', 10: '8', 11: '4', 12: 'z', 13: '7', 14: 't', 15: 'i', 16: 'c', 17: 'h', 18: 'o', 19: 'k', 20: '2', 21: 'n', 22: 'l', 23: 'v', 24: 'b', 25: 'y', 26: 'f', 27: 'm', 28: 'g', 29: 's', 30: 'r', 31: 'e', 32: 'a', 33: '9', 34: 'j', 35: 'q'
